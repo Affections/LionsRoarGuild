@@ -1,0 +1,7 @@
+﻿
+body > div.container.body-content > div:nth-child(1) > img {
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+}

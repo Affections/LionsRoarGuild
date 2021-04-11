@@ -1,0 +1,25 @@
+﻿@model IEnumerable<LionsRoarGuild.Models.Post>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@*<link rel="stylesheet" href="~/Views/Post/PostDesign/indexDesign.css">*@
+<h1 style="text-align: center;">LionsRoar ^ Posts</h1>
+
+
+
+
+@foreach (var item in Model)
+{
+
+    <h2>
+       Author: @Html.DisplayFor(modelItem => item.MemberName)
+    </h2>
+    <h4>
+        @Html.DisplayFor(modelItem => item.Description)
+    </h4>
+
+}
+
+

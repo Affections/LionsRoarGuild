@@ -1,46 +1,30 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
-using System.Threading.Tasks;
-using Website.Models;
+using System.Web;
+using System.Web.Mvc;
 
-namespace Website.Controllers
+namespace LionsRoarGuild.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
-
-        public IActionResult Index()
+        public ActionResult Index()
         {
             return View();
         }
 
-        public IActionResult AboutUs()
+        public ActionResult About()
         {
-            return View();
-        }
-        public IActionResult Achievments()
-        {
+            ViewBag.Message = "Your application description page.";
+
             return View();
         }
 
-        public IActionResult Members()
+        public ActionResult Contact()
         {
-            return View();
-        }
+            ViewBag.Message = "Your contact page.";
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return View();
         }
     }
 }

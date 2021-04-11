@@ -1,12 +1,20 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewBag.Title = "Home Page";
+
 }
-
-<div class="text-center">
-
-    <IMG SRC="~/images/homepage.gif">
+<link style="stylesheet" href="~/Views/Home/HomeDesign/indexDesign.css">
 
 
-    @*<h1 class="display-4">Welcome</h1>
-        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>*@
-</div>
+<body>
+    <div>
+        <img src="~/Images/logoLion.png" />
+        <div style=" text-align: center; ">
+            <img src="~/Images/Banner.gif" />
+        </div>
+        <img src="~/Images/logoLion.png" />
+    </div>
+    <div style="width: 350px; float:left; height: 100%;">@RenderPage("~/Views/Post/Create.cshtml")</div>
+    <div style="margin-left: 350px;">@{Html.RenderAction("Index", "Post"); }</div>
+
+
+     </body>
